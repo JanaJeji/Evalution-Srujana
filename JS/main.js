@@ -90,6 +90,15 @@ function onSubmit() {
   let userAction = confirm("You have chosen " + totalCredit + " credits for this semester. You cannot change once you submit. Do you want to confirm?")
   if (userAction) {
     finalSelectedCourses = selectedCourses;
-    divdataSelected.innerHTML = finalSelectedCourses;
+    var rhtml = "<ul class='left-list'> <h3> Selected Courses</h3>";
+  for (var i = 0; i < selectedCourses.length; i++) {
+    rhtml += "<div class='one-course' id='" + selectedCourses[i].courseId + "' data-credit=" + selectedCourses[i].credit + ">" +
+      "<li class='courseName'>" + selectedCourses[i].courseName + "</li>" +
+      "<li class='courseRequired'>Course Type: " + courseType(selectedCourses[i].required) + "</li>" +
+      "<li class='courseCredit'>Course Credit: " + selectedCourses[i].credit + "</li>" +
+      "</div>";
+  }
+  rhtml += "</ul>";
+  divdataSelected.innerHTML = rhtml;
   }
 }
