@@ -6,13 +6,10 @@
     padding: 5px;
 }
 
-.container-row .sel-left {
-    overflow: auto;
-
-}
-
+.container-row .sel-left,
 .container-row .sel-right {
-
+    overflow: auto;
+    border: solid;
 }
 
 ul.left-list {
@@ -22,31 +19,20 @@ ul.left-list {
     display: grid;
 }
 
-ul.left-list li{
+ul.left-list li {
     background-color: rgb(221, 239, 221);
-}
-
-ul.left-list li.courseID{
-
-}
-
-ul.left-list li.courseName{
-
-}
-
-ul.left-list li.courseRequired{
-
-}
-
-ul.left-list li.courseCredit{
-
 }
 
 .one-course {
     border: 2px solid black;
     text-align: center;
 }
-  
-  .one-course.selected li{
+
+.one-course.selected li {
     background-color: deepskyblue;
-  }
+}
+
+button {
+    height: 30px;
+    padding-left: 5px;
+}

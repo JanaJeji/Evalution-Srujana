@@ -39,16 +39,16 @@ let totalCredit = 0;
           selectedCourse = courseData[i];
         }
       }
-     
+
       if (this.classList.contains('selected')) {
         this.classList.remove('selected');
         unSelectCourse(selectedCourse);
       } else {
         if (totalCredit > 18 || (totalCredit + selectedCourse.credit) > 18) {
-            alert("You can only choose up to 18 credits in one semester");
+          alert("You can only choose up to 18 credits in one semester");
         } else {
-            this.classList.add('selected');
-            selectCourse(selectedCourse);
+          this.classList.add('selected');
+          selectCourse(selectedCourse);
         }
       }
     });
@@ -91,14 +91,14 @@ function onSubmit() {
   if (userAction) {
     finalSelectedCourses = selectedCourses;
     var rhtml = "<ul class='left-list'> <h3> Selected Courses</h3>";
-  for (var i = 0; i < selectedCourses.length; i++) {
-    rhtml += "<div class='one-course' id='" + selectedCourses[i].courseId + "' data-credit=" + selectedCourses[i].credit + ">" +
-      "<li class='courseName'>" + selectedCourses[i].courseName + "</li>" +
-      "<li class='courseRequired'>Course Type: " + courseType(selectedCourses[i].required) + "</li>" +
-      "<li class='courseCredit'>Course Credit: " + selectedCourses[i].credit + "</li>" +
-      "</div>";
-  }
-  rhtml += "</ul>";
-  divdataSelected.innerHTML = rhtml;
+    for (var i = 0; i < selectedCourses.length; i++) {
+      rhtml += "<div class='one-course' id='" + selectedCourses[i].courseId + "' data-credit=" + selectedCourses[i].credit + ">" +
+        "<li class='courseName'>" + selectedCourses[i].courseName + "</li>" +
+        "<li class='courseRequired'>Course Type: " + courseType(selectedCourses[i].required) + "</li>" +
+        "<li class='courseCredit'>Course Credit: " + selectedCourses[i].credit + "</li>" +
+        "</div>";
+    }
+    rhtml += "</ul>";
+    divdataSelected.innerHTML = rhtml;
   }
 }
