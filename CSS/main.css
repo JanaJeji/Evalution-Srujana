@@ -1,0 +1,52 @@
+.container-row {
+    border-style: solid;
+    min-height: 100px;
+    display: flex;
+    width: 50%;
+    padding: 5px;
+}
+
+.container-row .sel-left {
+    overflow: auto;
+
+}
+
+.container-row .sel-right {
+
+}
+
+ul.left-list {
+    list-style-type: none;
+    height: 300px;
+    width: 200px;
+    display: grid;
+}
+
+ul.left-list li{
+    background-color: rgb(221, 239, 221);
+}
+
+ul.left-list li.courseID{
+
+}
+
+ul.left-list li.courseName{
+
+}
+
+ul.left-list li.courseRequired{
+
+}
+
+ul.left-list li.courseCredit{
+
+}
+
+.one-course {
+    border: 2px solid black;
+    text-align: center;
+}
+  
+  .one-course.selected li{
+    background-color: deepskyblue;
+  }
